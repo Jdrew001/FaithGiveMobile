@@ -1,0 +1,7 @@
+{
+  "name": "FaithGiveMobile",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
