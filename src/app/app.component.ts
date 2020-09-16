@@ -3,6 +3,11 @@ import { Component, OnInit } from '@angular/core';
 import { Platform } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
+import { Plugins } from '@capacitor/core';
+import 'paypal-here-plugin';
+
+
+const { PayPalHere } = Plugins
 
 @Component({
   selector: 'app-root',
@@ -51,6 +56,7 @@ export class AppComponent implements OnInit {
     private statusBar: StatusBar
   ) {
     this.initializeApp();
+    PayPalHere.testFunc({value: 'test'}).then(val => console.log(val));
   }
 
   initializeApp() {
